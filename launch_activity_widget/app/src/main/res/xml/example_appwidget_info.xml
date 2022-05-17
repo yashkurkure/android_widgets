@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+This file defines the essential quantities of a widget such as:
+    resizing,
+    minimum dimensions,
+    default dimensions,
+    updatePeriod etc.
+
+All these attributes belong to the appwidget_provider
+-->
+
+<!--
+Notes:
+    initialLayout: The layout resource file that defines the layout of the widget. This will be the initial layout
+                        when the widget is first created.
+    minHeight: The minimum height of the widget on spawn, acts like the default height.
+    minWidth: The minimum width of the widget on spawn, acts like the default width.
+    minResizeWidth: The minimum width the widget can have when resized by user.
+    updatePeriodMillis: Specifies the time in Milli seconds after which onUpdate of the AppWidgetProvider is called.
+    widgetCategory: Since Android 5.0 widgets can only be used on the home_screen. Specify this by setting to "home_screen"
+
+-->
+
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/example_widget"
+    android:minHeight="40dp"
+    android:minWidth="110dp"
+    android:minResizeWidth="40dp"
+    android:resizeMode="vertical|horizontal"
+    android:updatePeriodMillis="3600000"
+    android:widgetCategory="home_screen">
+</appwidget-provider>

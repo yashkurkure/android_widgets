@@ -1,4 +1,4 @@
-# Luanch Flutter App Through Andoird Widget
+# Launch Flutter App Through Android Widget
 
 Adding Android widgets to flutter apps
 

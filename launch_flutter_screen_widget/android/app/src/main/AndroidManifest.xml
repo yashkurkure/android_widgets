@@ -37,5 +37,37 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+
+       <!--First, we need to declare the widget in the manifest-->
+       <!--
+       Notes:
+           android:name here specifies the AppWidgetProvider class used by the widget. In this app's case the
+           name of the AppWidgetProvider is ExampleAppWidgetProvider.
+
+       See file
+           ExampleAppWidgetProvider.java
+       -->
+       <receiver
+           android:name="ExampleAppWidgetProvider"
+           android:exported="false">
+
+           <intent-filter>
+               <!--The action element's name attribute specifies that our BroadCast receiver accepts the ACTION_APPWIDGET_UPDATE broadcast-->
+               <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+           </intent-filter>
+
+           <!--
+           Notes:
+               The meta-data specifies the AppWidgetProviderInfo xml resource using the android:resource attribute
+               The name attribute helps identify the data as AppWidgetProviderInfo, in this case we need to set it to android.appwidget.provider
+           -->
+           <meta-data android:name = "android.appwidget.provider"
+               android:resource="@xml/example_appwidget_info" />
+
+       </receiver>
+
+
+
     </application>
 </manifest>
